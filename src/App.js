@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import {Navbar} from './components/Navbar';
-import {Home} from './components/Home';
-
+import {Navbar} from './Components/Navbar';
+import {Home} from './Components/Home';
+// import {Product} from './Components/Product'
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
     {/* <Header /> */}
       <Navbar />
       <Home  />
+      {/* <Product /> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import  image1  from "../Assets/image1.png";
 import  image2  from "../Assets/image2.png"
 import image3 from "../Assets/image3.png"
-import { Navbar } from "./Navbar";
+// import { Navbar } from "./Navbar";
 import "../App.css"
 
 
