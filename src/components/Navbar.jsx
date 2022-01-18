@@ -10,14 +10,15 @@ height:50px;
 top: 0;
 margin-left: 5%;
 right: 0;
+z-index: 1;
 align-items: center;
 background-color:#FFFFFF;
-  // box-shadow:
-  // 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  // 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  // 0 12.5px 10px rgba(0, 0, 0, 0.06),
-  // 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  // 0 80px 60px rgba(0, 0, 0, 0.10)
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 80px 60px rgba(0, 0, 0, 0.10)
 `
 
 export const Navbar=()=> {

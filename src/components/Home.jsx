@@ -15,18 +15,24 @@ export const Home = () => {
 
     return (
         <div>
-           < Navbar />
-            <Carousel style={{marginTop:"20%"}}>
-            <img src={image1} alt="" />
+          
+            <Carousel >
+                <img src={image1} alt="d" />
             <img src={image2} alt="" />
             <img src={image3} alt="" />
             </Carousel>
+            {/* <div style={{marginTop:"5%"}}>
+            <img src={image1} alt="" style={{width:"100%"}} />
+            <img src={image2} alt="" style={{width:"100%"}}/>
+            <img src={image3} alt="" style={{width:"100%"}}/>
+            </div> */}
             <img style={{width:"100%"}} src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/1/14/0aee0d7a-a9ba-4881-aafc-21f6b5c3e4691642158269057-Desktop_Bank-Offer.jpg" alt="" />
             <img style={{ width: "95%", marginLeft: "2.5%", height: "200px" }} src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2022/1/16/f9ceb57d-ee89-4d93-923a-33fbe554283d1642317227306-DK1_2-599_01.jpg" alt="" />
             <img style={{width: "95%", marginLeft: "2.5%", height: "150px" }} src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/1/14/4e32982e-2e5e-47d6-8187-147059fce2171642158268993-Unbelievable-Deals.jpg" alt="" />
             <div className="set">
                 <div>
-                    <img style={{width:'100%',}} src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/1/9/e6d2213f-2797-4b11-aa72-0ab85f912ab91641702713591-USPA-_UCB.jpg" alt="" />
+                    <img style={{ width: '100%', }}
+                        src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/1/9/e6d2213f-2797-4b11-aa72-0ab85f912ab91641702713591-USPA-_UCB.jpg" alt="" />
                 </div>
                 <div>
                      < img style={{width:'100%'}}  src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/1/9/982eb1ae-0f43-4ec9-88cf-2c3ccaf0cc9b1641702713015-Louis_Philippe-_Arrow.jpg" alt="" />
