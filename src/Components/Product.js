@@ -48,10 +48,11 @@ export const Products = () => {
         getProdData()
     }, []);
     
-    const handleAddToBag = (id, image, title, price) => {
+    const handleAddToBag = (id, image, title, price,description) => {
     const payload = {
       product_id: id,
       image: image,
+      description:description,
       title: title,
       price: price,
     };
@@ -72,6 +73,7 @@ export const Products = () => {
                    <Box>
                     <div><Image src={e.image} alt=""/></div>
                    <p style={{ color: '#303F9F', fontWeight: "Bold" }}>{e.title}</p>
+                   <p>{e.description}</p>
                    
                    <p>{e.price}
                      <Link style={{ textDecoration: "none", marginLeft: "40%" }}
