@@ -1,6 +1,7 @@
-import { styled } from "@chakra-ui/react"
-// import styled from 'styled-components';
-export function Product ({jacketProduct}){
+// import { styled } from "@chakra-ui/react"
+import styled from 'styled-components';
+import {jacketProduct} from '../Datas/jacket'
+export function Product (){
     return(
         <JacketProductStyle>
             {

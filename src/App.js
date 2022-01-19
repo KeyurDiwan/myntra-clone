@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import {Navbar} from './Components/Navbar';
-import {Home} from './Components/Home';
-// import {Product} from './Components/Product'
+import {Navbar} from './components/Navbar';
+import {Home} from './components/Home';
+import {Product} from './components/Product'
 
 function App() {
   return (
     <div className="App">
     {/* <Header /> */}
-      <Navbar />
-      <Home  />
-      {/* <Product /> */}
+      {/* <Navbar />
+      <Home  /> */}
+      <Product />
     </div>
   );
 }

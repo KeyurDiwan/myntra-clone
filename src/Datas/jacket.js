@@ -1,18 +1,17 @@
 // import { RangeSlider } from "@chakra-ui/react";
-import jacket1 from '../Assets/jacket1';
-import jacket2 from '../Assets/jacket2';
 
-export const Product = [ 
+
+export const jacketProduct = [ 
     {
         id: 1,
-        pic:  jacket1,
+        pic:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC1uenMtPG8MRPVPyCM35bsHDGSyYvI0EX9A&usqp=CAU',
         heading : "WRONG",
         discreption: "Men Solid Biker Jacket",
         price: "Rs.2249"
     },
     {
         id: 1,
-        pic:  jacket2,
+        pic:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC1uenMtPG8MRPVPyCM35bsHDGSyYvI0EX9A&usqp=CAU',
         heading : "WRONG",
         discreption: "Men Solid Biker Jacket",
         price: "Rs.2249"
