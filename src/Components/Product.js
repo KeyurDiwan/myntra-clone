@@ -10,7 +10,6 @@ grid-gap: 3%;
 width: 90%;
 margin: auto;
 margin-top: 10%;
-}
 `
 
 

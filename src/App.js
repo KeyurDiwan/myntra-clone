@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import {Navbar} from './components/Navbar';
-import {Home} from './components/Home';
-import {Products} from './components/Product'
+import {Navbar} from './Components/Navbar';
+import {Home} from './Components/Home';
+import {Products} from './Components/Product'
 import { Route, Routes } from 'react-router-dom';
-import { ProductDetails } from './components/ProductDetails';
-import { Cart } from './components/Cart';
+import { ProductDetails } from './Components/ProductDetails';
+import { Cart } from './Components/Cart';
 
 function App() {
   return (
