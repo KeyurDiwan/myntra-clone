@@ -31,6 +31,6 @@ button{
 }
 
 button:hover{
-  border-radius: 15px;
+ 
   cursor: pointer;
 }
