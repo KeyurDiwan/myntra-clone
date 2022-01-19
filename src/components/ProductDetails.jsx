@@ -50,7 +50,7 @@ export const ProductDetails = () => {
             <h3> title : {data.title}</h3>
             <h3>Product Price  :  {data.price}</h3>
                 <p>
-                    Category{data.category}</p>
+                    Category{data.Category}</p>
                 <p>
                     More Info: {data.description}</p>
             </Box>
