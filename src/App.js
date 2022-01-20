@@ -15,10 +15,13 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/products" element={<Products/>}></Route>
         <Route path="/products/:id" element={<ProductDetails />}></Route>
-         <Route path="/cart/:id" element={<Cart/>}></Route>
+        <Route path="/cart/:id" element={<Cart />}></Route>
+      
       </Routes>
     </>
   );
 }
 
 export default App;
+
+
