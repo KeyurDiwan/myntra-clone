@@ -5,12 +5,12 @@ import "../App.css"
 
 const Container = styled.div`
 display: grid;
-grid-template-columns: repeat(5, 15%);
+grid-template-columns: repeat(5, 18%);
 grid-gap: 2%;
 width: 100%;
-margin-left: 20%;
 
-margin-top: 10%;
+
+margin-top: 5%;
 `
 
 
@@ -24,6 +24,10 @@ border-radius: 10px;
 padding: 10px;
 }
 
+p {
+  margin-top: -3px;
+}
+
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -33,6 +37,16 @@ padding: 10px;
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
    
+`
+const Div = styled.div`
+  display:flex;
+
+`
+
+
+const Filter = styled.div`
+width: 25%;
+ border: 1px solid black;
 `
 
 
@@ -68,14 +82,23 @@ export const Products = () => {
     }).then(alert("Added successfully"));
   };
 
-    return (
-        <Container>
+  return (
+      
+    <Div>
+     <Filter>
+
+        </Filter>
+  
+      <Container>
+       
            {
                set.map((e)=>(
                    <Box>
                     <div><Image src={e.image} alt=""/></div>
-                   <div><p style={{ color: '#303F9F', fontWeight: "Bold" }}>{e.title}</p>
-                   <p>{e.description}</p>
+                   <div>
+                     
+                    <p> {e.title}</p>
+                <p> {e.description}</p>
                    
                    <p>{e.price}
                      <Link style={{ textDecoration: "none", marginLeft: "40%" }}
@@ -90,6 +113,7 @@ export const Products = () => {
                    </Box>
                ))
            }
-        </Container>
+      </Container>
+        </Div>
     )
 }
