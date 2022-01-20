@@ -5,22 +5,28 @@ import "../App.css"
 
 const Container = styled.div`
 display: grid;
-grid-template-columns: repeat(4, 23%);
-grid-gap: 3%;
-width: 90%;
-margin: auto;
-margin-top: 10%;
+grid-template-columns: repeat(5, 18%);
+grid-gap: 2%;
+width: 100%;
+
+
+margin-top: 5%;
 `
 
 
 const Image = styled.img`
 width : 100%;
-height: 20%;
+
 `
 const Box = styled.div`
+:hover{
 border-radius: 10px;
+padding: 10px;
+}
 
-padding: 20px;
+p {
+  margin-top: -3px;   // change margin here...! 
+}
 
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -31,6 +37,16 @@ padding: 20px;
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
    
+`
+const Div = styled.div`
+  display:flex;
+
+`
+
+
+const Filter = styled.div`
+width: 25%;
+ border: 1px solid black;
 `
 
 
@@ -56,7 +72,7 @@ export const Products = () => {
       title: title,
       price: price,
     };
-      
+      //json-server db.json --port 3001 --watch
     fetch("http://localhost:3001/bag", {
       method: "POST",
       body: JSON.stringify(payload),
@@ -66,14 +82,23 @@ export const Products = () => {
     }).then(alert("Added successfully"));
   };
 
-    return (
-        <Container>
+  return (
+      
+    <Div>
+     <Filter>
+
+        </Filter>
+  
+      <Container>
+       
            {
                set.map((e)=>(
                    <Box>
                     <div><Image src={e.image} alt=""/></div>
-                   <p style={{ color: '#303F9F', fontWeight: "Bold" }}>{e.title}</p>
-                   <p>{e.description}</p>
+                   <div>
+                     
+                  <h3>{e.title}</h3>
+                <p> {e.description}</p>
                    
                    <p>{e.price}
                      <Link style={{ textDecoration: "none", marginLeft: "40%" }}
@@ -84,10 +109,11 @@ export const Products = () => {
                      handleAddToBag( e.product_id, e.image, e.title, e.price )}
                      style={{ marginLeft: "1%" }}>Add to Cart</button>
                    
-                   <button style={{ marginLeft: "20%" }}>Buy Now</button>
+                   <button style={{ marginLeft: "20%" }}>Buy Now</button></div>
                    </Box>
                ))
            }
-        </Container>
+      </Container>
+        </Div>
     )
 }
