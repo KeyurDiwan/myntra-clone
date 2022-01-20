@@ -25,7 +25,7 @@ padding: 10px;
 }
 
 p {
-  margin-top: -3px;
+  margin-top: -3px;   // change margin here...! 
 }
 
   box-shadow:
@@ -97,7 +97,7 @@ export const Products = () => {
                     <div><Image src={e.image} alt=""/></div>
                    <div>
                      
-                    <p> {e.title}</p>
+                  <h3>{e.title}</h3>
                 <p> {e.description}</p>
                    
                    <p>{e.price}
