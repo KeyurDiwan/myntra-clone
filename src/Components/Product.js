@@ -5,7 +5,7 @@ import "../App.css"
 
 const Container = styled.div`
 display: grid;
-background-color: white;
+background-color: #ffffff;
 grid-template-columns: repeat(5, 18%);
 grid-gap: 2%;
 width: 100%;
@@ -46,7 +46,9 @@ p {
 `
 const Div = styled.div`
   display:flex;
-
+  
+  background-color: #ffffff;
+  
 `
 
 
@@ -54,7 +56,8 @@ const Filter = styled.div`
 width: 25%;
 margin-top: 5%;
 margin-left:1%;
- border: 1px solid black;
+border: 1px solid black;
+padding: 20px 0px 15px 25px;
 
  input {
    
@@ -209,7 +212,7 @@ export const Products = () => {
                   <h3>{e.title}</h3>
                 <p> {e.description}</p>
                    
-                   <p>{e.price}
+                   <p>{"Rs."+e.price}
                      <Link style={{ textDecoration: "none", marginLeft: "40%" }}
                        to={`/products/${ e.id }`}>More Info</Link>
                    </p>

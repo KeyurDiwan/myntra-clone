@@ -756,6 +756,12 @@
       "title": "Zaveri Pearls",
       "price": 412,
       "id": 15
+    },
+    {
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10339033/2019/8/6/df9a712b-a5fc-4a65-870a-0854fb50ea221565093150139-US-Polo-Assn-Men-Casual-Shoes-7391565093148433-1.jpg",
+      "title": "U.S Polo Assn",
+      "price": 1799,
+      "id": 16
     }
   ]
 }
