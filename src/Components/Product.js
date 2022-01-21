@@ -13,16 +13,20 @@ width: 100%;
 margin-top: 5%;
 `
 
-
+const  Button = styled.button`
+margin-left: 20%;
+`
 const Image = styled.img`
 width : 100%;
 
 `
 const Box = styled.div`
+
 :hover{
 border-radius: 10px;
 padding: 10px;
 }
+
 
 p {
   margin-top: -3px;   // change margin here...! 
@@ -109,7 +113,7 @@ export const Products = () => {
                      handleAddToBag( e.product_id, e.image, e.title, e.price )}
                      style={{ marginLeft: "1%" }}>Add to Cart</button>
                    
-                   <button style={{ marginLeft: "20%" }}>Buy Now</button></div>
+                   <Button>Buy Now</Button></div>
                    </Box>
                ))
            }
