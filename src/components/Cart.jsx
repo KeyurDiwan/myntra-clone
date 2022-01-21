@@ -1,70 +1,157 @@
 import { Box, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Cart =()=> {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState( [] );
+  const [price, setPrice] = useState();
+  let sum = 0;
+   sum = list.map(item => +item.price)
+        .reduce( ( prev, curr ) => prev + curr, 0 );
+        // 
+        console.log( sum , "sum" )
+ 
+ 
+  const setDelete = async () => {
+      let res = await fetch(" http://localhost:3001/bag");
+        let d = await res.json();
+  //  console.log(d)
+   console.log("clicked")
+  //  const JavaScriptApplicants = d.filter(e => e.gender.includes(event.target.value));
+  //  setList(JavaScriptApplicants)
+  
+  }
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [sum] );
+  
+        
+        // 
+
   const fetchData = () => {
     fetch("http://localhost:3001/bag")
       .then((d) => d.json())
       .then((res) => {
-        setList(res);
+        setList( res );
+       
+setPrice(sum)
+        // setPrice(list.reduce())
       });
+
+   
   };
-  console.log( list );
+  // console.log( list );
+
+  const orderConfirm = () => {
+
+  }
+   
   
   const Div = styled.div`
     display: flex;
     flex-direction: column;
-    width: 88%;
-    margin-left: 5%;
-    
-    
-    div {
-      width: 100%;
-      margin-top: 20%;
-      height: 460px;
-      color: gray.400;
-    box-shadow:3.4px 6.7px 6.7px hsl(0deg 0% 0% / 0.40);
-    }
+    width: 100%;
   
-    div img {
-      width:10%;
-      // height: 70%;
-    }
-    
-    div p {
-      // margin-top: -28%;
-      margin-left: 2%;
-    }
-    div h5 {
-      height: 80px;
-      margin-left: 2%;
-    }
+    margin:5%;
+    `;
+
+  const Img = styled.div`
+    display: flex;
    
-    div button {
-      margin-left: 2%;
+
+    img {
+      width:100px;
+      
+      margin-top: 2%
     }
-  `;
-  console.log("list",list)
+
+   
+
+  `
+
+  const Con = styled.div`
+  display: flex;
+  margin-top: 3%;
+    background-color: whitesmoke;
+    width: 500px;
+  flex-direction: column;
+
+   h2 {
+      margin-top:7%;
+      width: 100%;
+      margin-left: 50px;
+      color: black
+    }
+
+    button {
+      width: 100px;
+      margin-left: 10%;
+      height: 30px;
+      /* margin-top: -20px */
+    }
+  `
+
+  const Payment = styled.div`
+  border: 1px solid red;
+  margin:10px;
+  margin-right: 10%;
+  margin-top: 6.5%;
+  width: 100%;
+
+  button {
+    margin-left: 5px;
+    height: 30px;
+  }
+  `
+
+  const Div1 = styled.div`
+    display: flex;
+    flex-direction: row;
+  `
+  console.log( "list", list )
+
+   const handlePageChange = () => {
+    window.location.href = "#/donmde";
+  }
+
   return (
-    <div>
+    <Div1>
       <Div>
         {list.map((e) => (
           <div key={e.product_id}>
-
-              <img src={e.image} alt="imgs" />
+          
+              <Img>
+            <img src={e.image} alt="imgs" />
+            
+              <Con>
               <h2>{e.title}</h2>
-            <h1>{e.price}</h1>
-            {/* <button> Confirm Order</button> */}
+
+                <h2> Rs. {e.price}</h2>
+
+                </Con>
+              
+            </Img>
+            
+         
          
           </div>
-        ))}
+        ) )}
+         
       </Div>
-    </div>
+
+     <Payment>
+        <div>
+          <h2>Total Price: {price} </h2>
+          <Link to="/done" >
+            <button>
+              cons=firm order
+            </button>
+          </Link>
+          {/* <button onClick={handlePageChange}>Confirm Order </button> */}
+            </div>
+      </Payment>
+    </Div1>
   );
 }
 
