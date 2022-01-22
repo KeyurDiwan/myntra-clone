@@ -145,7 +145,7 @@ setPrice(sum)
           <h2>Total Price: {price} </h2>
           <Link to="/done" >
             <button>
-              cons=firm order
+              confirm order
             </button>
           </Link>
           {/* <button onClick={handlePageChange}>Confirm Order </button> */}
