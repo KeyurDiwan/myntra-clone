@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./Navbar.scss";
-import { SearchIcon } from "@chakra-ui/icons";
+// import { SearchIcon } from "@chakra-ui/icons";
 
 const Div = styled.nav`
   position: fixed;
@@ -735,7 +735,7 @@ export const Navbar = () => {
         <h4 className="nw">NEW</h4>
 
         <div className="inp1">
-          <SearchIcon className="sr" />
+        
           <input
             type="text"
             className="inp"

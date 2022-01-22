@@ -5,6 +5,7 @@ import "../App.css"
 
 const Container = styled.div`
 display: grid;
+background-color: #ffffff;
 grid-template-columns: repeat(5, 18%);
 grid-gap: 2%;
 width: 100%;
@@ -13,16 +14,21 @@ width: 100%;
 margin-top: 5%;
 `
 
-
+const  Button = styled.button`
+margin-left: 20%;
+`
 const Image = styled.img`
+
 width : 100%;
 
 `
 const Box = styled.div`
+
 :hover{
-border-radius: 10px;
-padding: 10px;
+border-radius: 3px;
+padding: 3px;
 }
+
 
 p {
   margin-top: -3px;   // change margin here...! 
@@ -40,23 +46,76 @@ p {
 `
 const Div = styled.div`
   display:flex;
-
+  
+  background-color: #ffffff;
+  
 `
 
 
 const Filter = styled.div`
 width: 25%;
- border: 1px solid black;
+margin-top: 5%;
+margin-left:1%;
+border: 1px solid black;
+padding: 20px 0px 15px 25px;
+
+ input {
+   
+  
+ }
 `
 
 
 export const Products = () => {
-    const [set,setData] = useState([]);
+  const [set, setData] = useState( [] );
+  const [val, setVal] = useState( '' )
+  
+ async function setGender( event ) {
+  // d = []
+     let res = await fetch(" http://localhost:3001/prods");
+        let d = await res.json();
+  //  console.log(d)
+   
+   const JavaScriptApplicants = d.filter(e => e.gender.includes(event.target.value));
+   setData(JavaScriptApplicants)
+  
+  }
+
+   async function setCat( event ) {
+
+     let res = await fetch(" http://localhost:3001/prods");
+        let d = await res.json();
+
+   
+   const JavaScriptApplicants = d.filter(e => e.category.includes(event.target.value));
+
+
+        setData(JavaScriptApplicants)
+ 
+  }
+
+   async function setCol( event ) {
+
+     let res = await fetch(" http://localhost:3001/prods");
+        let d = await res.json();
+
+   
+   const JavaScriptApplicants = d.filter(e => e.color.includes(event.target.value));
+
+
+        setData(JavaScriptApplicants)
+ 
+
+
+  }
+
+
+
 
     const getProdData = async ()=>{
         let res = await fetch(" http://localhost:3001/prods");
         let d = await res.json();
-        console.log(d)
+        // console.log(d)
         setData(d)
     } 
 
@@ -82,10 +141,63 @@ export const Products = () => {
     }).then(alert("Added successfully"));
   };
 
+
+  
+
   return (
       
     <Div>
-     <Filter>
+      <Filter>
+        <h3>FILTERS</h3>
+        <hr />
+        <div onChange={setGender.bind( this )}>
+          
+          <input type="radio" value="Men" name="gender"  /> Male
+          <br />
+          <input type="radio" value="female" name="gender" /> Female
+            <br />
+          <input type="radio" value="boy" name="gender" /> Boy
+            <br />
+        <input type="radio" value="girl" name="gender"/> Girl
+      </div>
+       
+        <hr />
+        <div>
+          <h3> CATEGORIES</h3>
+          <div onChange={setCat.bind( this )}>
+         
+            <input type="checkbox" name="skills" id="radio" value="jwellary" />  Jwelarry
+        <br />
+          
+           
+            <input type="checkbox" name="skills" id="radio" value="Shoes" />  Shoes
+     
+   <br />
+       
+            <input type="checkbox" name="skills" id="radio" value="Jacket" />  Jacket
+         
+          </div>
+          < hr />
+        
+          <h3> Color </h3>
+          <div onChange={setCol.bind( this )}>
+          <input type="radio" name="price" id="radio" value="Pink" /> Red 
+         <br />
+            <input type="radio" name="price" id="radio" value="Blue" />  Blue
+         <br />
+            <input type="radio" name="price" id="radio" value="Black" />  Black
+             <br />
+             <input type="radio" name="price" id="radio" value="White" />   White
+         <br />
+            <input type="radio" name="price" id="radio" value="Golden" /> Golden
+         <br />
+         
+
+          </div>
+        
+        
+        
+        </div>
 
         </Filter>
   
@@ -100,7 +212,7 @@ export const Products = () => {
                   <h3>{e.title}</h3>
                 <p> {e.description}</p>
                    
-                   <p>{e.price}
+                   <p>{"Rs."+e.price}
                      <Link style={{ textDecoration: "none", marginLeft: "40%" }}
                        to={`/products/${ e.id }`}>More Info</Link>
                    </p>
@@ -109,7 +221,7 @@ export const Products = () => {
                      handleAddToBag( e.product_id, e.image, e.title, e.price )}
                      style={{ marginLeft: "1%" }}>Add to Cart</button>
                    
-                   <button style={{ marginLeft: "20%" }}>Buy Now</button></div>
+                   <Button>Buy Now</Button></div>
                    </Box>
                ))
            }
