@@ -23,16 +23,21 @@ export const ProductDetails = () => {
         <Container>
             <Image src={data.image} alt=""/>
             <Box>
-            <h1>{data.title}</h1>
+            <h1>{data.title}</h1><br/>
             <p className="descr">{data.description}</p>
+            <p className="rating">{"Rating "+data.rating}</p>
             <h2>{"Rs. "+ data.price}</h2>
-                <p>
-                {data.Category}</p>
+                <p>{data.Category}</p>
+                <br/><br/><br/>
+                <div className="bag_wishlist">
                 <div className="add_to_bag">
-                    <button>Add To Bag</button>
-                    <br />
-                <button className="wishlist">WISHLIST</button>
-                </div>              
+                    <button>ADD TO BAG</button>
+                    </div>
+                <div className="wishlist">
+                <button>WISHLIST</button>
+                </div>
+                </div>
+                              
             </Box>
         </Container>
     )
@@ -53,7 +58,7 @@ background-color: #ffff;
 border: 2px solid red;
 `
 const Image = styled.img`
-width: 90%;
+width: 82%;
 height: 600px;
 box-shadow:3.4px 6.7px 6.7px hsl(0deg 0% 0% / 0.40);
 `
@@ -61,7 +66,9 @@ box-shadow:3.4px 6.7px 6.7px hsl(0deg 0% 0% / 0.40);
 const Box = styled.div`
 text-align: left;
 margin-left: 15px;
-
+.rating{
+    margin-top: -10px;
+}
 .descr{
 /* color:#535665; */
 font-family: Whitney;
@@ -69,36 +76,30 @@ font-size: 20px;
 padding: 5px 20px 14px 0px;
 margin-top: -15px;
 }
+.bag_wishlist{
+    display: flex;
+    /* border: red solid 2px; */
+    height: 70px;
+}
 .add_to_bag{
-align-items:center;
+width    :30% ;
 background-color:#ff527b;
-border-color:#ff3e6c;
 border-radius:4px;
-border-style:solid;
-border-width:1px;
 color:#ffffff;
-display:flex;
-flex-basis:0%;
-font-weight:500;
 justify-content:center;
-margin:0px 14.725px 0px 0px;
-padding:15px 0px;
+padding:15px;
 text-align:center;
 }
 .wishlist{
-align-items:center;
-background-color:#ffffff;
+margin-left: 10%;
+width: 30% ;
+color:black;
+background-color:#ff527b;
 border-color:#535766;
 border-radius:4px;
 border-style:solid;
 border-width:1px;
-color:#282c3f;
-display:flex;
-flex-basis:0%;
-font-weight:500;
-justify-content:center;
-letter-spacing:0.4px;
-padding:10px 0px;
+padding:10px;
 text-align:center;
 }
 `

@@ -762,6 +762,12 @@
       "title": "U.S Polo Assn",
       "price": 1799,
       "id": 16
+    },
+    {
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14799210/2021/9/25/7c28cf48-6d23-455b-9d07-c5be26d994051632536691110AMISetOf20Gold-PlatedWhiteContemporaryStudsDropEarrings1.jpg",
+      "title": "AMI",
+      "price": 399,
+      "id": 17
     }
   ]
 }
