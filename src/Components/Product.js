@@ -82,7 +82,7 @@ export const Products = () => {
   }
 
    async function setCat( event ) {
-
+    console.log(event)
      let res = await fetch(" http://localhost:3001/prods");
         let d = await res.json();
 
