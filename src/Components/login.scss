@@ -1,0 +1,78 @@
+.main{
+   padding: 25px;
+    background-image: linear-gradient(
+        84deg
+        , rgb(254,237,244), rgb(252,240,228));
+}
+
+.login{
+    background-color: white;
+    margin-top: 25px;
+    
+    img{
+        width: 100%;
+    }
+}
+.phno{
+    height: 40px;
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid  rgb(228, 228, 230);
+    margin-top: 3%;
+
+    &::placeholder{
+        color:  rgb(173, 173, 173);
+        font-size: 15px;
+    }
+}
+.para{
+    font-size: 14px;
+    margin-left: 10%;
+    color:  rgb(173, 173, 173);
+    margin-top: 8%;
+}
+.para span{
+    color: rgb(255,63,108);
+}
+#btn1{
+    width: 80%;
+    background-color: rgb(255,63,108);
+    color: white;
+    font-weight: 500;
+    margin-left: 10%;
+}
+#login{
+    display: block;
+}
+#otp-container{
+    display: none;
+    height: 14cm;
+    width: 10cm;
+    background-color: white;
+    margin-top: 3cm;
+    padding-bottom: 0.5cm;
+    margin-left: 37%;
+
+    img{
+        height: 100px;
+        width: 100px;
+        margin: 30px;
+    }
+
+    div h2{
+        margin-left: 10%;
+    }
+
+    div input{
+        margin-left: 10%;
+        height: 30px;
+        width: 80%;
+    }
+    div button{
+        margin-left: 10%;
+        width: 80%;
+        height: 50px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
