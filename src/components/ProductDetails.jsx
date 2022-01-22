@@ -29,7 +29,8 @@ export const ProductDetails = () => {
                 <p>
                 {data.Category}</p>
                 <div className="add_to_bag">
-                <button>Add To Bag</button>
+                    <button>Add To Bag</button>
+                    <br />
                 <button className="wishlist">WISHLIST</button>
                 </div>              
             </Box>
@@ -69,7 +70,7 @@ padding: 5px 20px 14px 0px;
 margin-top: -15px;
 }
 .add_to_bag{
-/* align-items:center;
+align-items:center;
 background-color:#ff527b;
 border-color:#ff3e6c;
 border-radius:4px;
@@ -82,36 +83,22 @@ font-weight:500;
 justify-content:center;
 margin:0px 14.725px 0px 0px;
 padding:15px 0px;
-text-align:center; */
+text-align:center;
 }
 .wishlist{
-    /* align-items:
-center;
-background-color:
-#ffffff;
-border-color:
-#535766;
-border-radius:
-4px;
-border-style:
-solid;
-border-width:
-1px;
-color:
-#282c3f;
-display:
-flex;
-flex-basis:
-0%;
-font-weight:
-500;
-justify-content:
-cente;
-letter-spacing:
-0.4px;
-padding:
-10px 0px;
-text-align:
-center; */
+align-items:center;
+background-color:#ffffff;
+border-color:#535766;
+border-radius:4px;
+border-style:solid;
+border-width:1px;
+color:#282c3f;
+display:flex;
+flex-basis:0%;
+font-weight:500;
+justify-content:center;
+letter-spacing:0.4px;
+padding:10px 0px;
+text-align:center;
 }
 `
